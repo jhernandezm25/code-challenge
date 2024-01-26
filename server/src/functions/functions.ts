@@ -63,7 +63,7 @@ export const updateName = (req: Request, res: Response) => {
     }
 
     const success = nameController.updateName(id, name, avatarData);
-    res.status(201).json({ message: "Name updated successfully", data: success });
+    res.status(201).json({ data: success });
   } catch (error: any) {
     res.status(500).send(error.message);
   }

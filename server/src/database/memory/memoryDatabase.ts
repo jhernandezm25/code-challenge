@@ -32,6 +32,6 @@ export class InMemoryDatabase implements IName {
       }
       return this.names.find((name) => name.id === id);
     }
-    return false;
+    throw new Error("Name not found");
   }
 }
