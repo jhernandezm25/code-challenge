@@ -56,9 +56,7 @@ This is a simple Full Stack App with  backend and a minimal frontend. The applic
 - **Description:** Adds a new name to the database. Accepts a name and a file as a parameter
 - **Example:**
   ```bash
-  curl --location 'http://localhost:3001/api/addName' \
---form 'avatar=@"/C:/Users/jorge/OneDrive/Escritorio/78106547.jpeg"' \
---form 'name="Jhon doe"'
+  curl --location 'http://localhost:3001/api/addName' \ --form 'avatar=@"/C:/Users/jorge/OneDrive/Escritorio/78106547.jpeg"' \ --form 'name="Jhon doe"'
   ```
 
 
