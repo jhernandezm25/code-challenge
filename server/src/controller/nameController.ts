@@ -13,9 +13,9 @@ export class NameController {
     }
   }
 
-  public addName(name: string, avatarData?: string) {
+  public addName(id: string, name: string, avatarData?: string) {
     try {
-      return { code: 200, data: nameRepository.addName(name, avatarData) };
+      return { code: 200, data: nameRepository.addName(id,name, avatarData) };
     } catch (error: any) {
       return { code: 500, data: error.message };
     }

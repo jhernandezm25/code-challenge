@@ -12,7 +12,7 @@ export class NameRepository {
     return this.database.getNames();
   }
 
-  addName(name: string, avatarData?: string): void {
-    this.database.addName(name, avatarData);
+  addName(id: string, name: string, avatarData?: string): void {
+    this.database.addName(id, name, avatarData);
   }
 }

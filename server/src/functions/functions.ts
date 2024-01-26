@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { NameController } from "../controller/nameController";
+import { v4 as uuidv4 } from 'uuid';
 
 const nameController = new NameController();
 
@@ -27,7 +28,7 @@ export const addName = (req: Request, res: Response) => {
         avatarData = uploadedFile.buffer.toString('base64');
     }
 
-    const success = nameController.addName(name, avatarData);
+    const success = nameController.addName( uuidv4() ,name, avatarData);
     res.status(201).json({ message: "Name added successfully" });
   } catch (error: any) {
     res.status(500).send(error.message);
