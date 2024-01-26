@@ -37,6 +37,19 @@ This is a simple Full Stack App with  backend and a minimal frontend. The applic
 - **Frontend:**
   - React.js with TypeScript
 
+## Model Explanation
+
+The application uses a simple data model for representing names, consisting of the following properties:
+
+- **id:** Each name is assigned a unique identifier (`id`) at the time of creation. This identifier serves as a primary key and facilitates the ability to track and update specific names. We leverage the `uuid` library to generate these unique identifiers.
+
+- **name:** The actual name associated with the record.
+
+- **avatar:** An optional field representing the avatar image associated with the name. This field can be left blank during the creation or update of a name.
+
+By assigning a unique `id` to each name, the application ensures a reliable and consistent way to identify and update individual records. The `avatar` field, being optional, provides flexibility for users who may choose not to associate an image with a particular
+
+
 ## Services
 
 ### 1. Get My Name
@@ -60,11 +73,26 @@ This is a simple Full Stack App with  backend and a minimal frontend. The applic
   ```
 
 
+### 3. Update a Name
 
-### Notes
+- **Endpoint:** `/api/updateName/:id`
+- **Method:** POST
+- **Description:** update a name into the database. Accepts a name and a file as a parameter
+- **Example:**
+  ```bash
+  curl --location 'http://localhost:3001/api/updateName/1f3bb381-2c0b-400b-aa33-f87c20f429fa' \ --form 'avatar=@""' \
+--form 'name="Jhon Segundo"'
+  ```
+
+
+## Notes
+### 1. 
 For the addName and updateName API endpoints, make sure to send the data in the form format. For addName, include a field for the name and an optional field for the avatar. For updateName, provide the id of the name to be updated along with optional fields for the new name and avatar.
 
+### 2. 
+I added a postman collection in the folder postman_collection that are in the root
 
+### 3. Update a Name
 
 
     

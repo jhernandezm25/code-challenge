@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "5ce614ec-86fe-4bbb-8a59-416db7236794",
+		"name": "namesChallenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19053418"
+	},
+	"item": [
+		{
+			"name": "getNames",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/getNames",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"getNames"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add names",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "/C:/Users/jorge/OneDrive/Escritorio/78106547.jpeg"
+						},
+						{
+							"key": "name",
+							"value": "Jhon doe",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/addName",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"addName"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateName",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "/C:/Users/jorge/OneDrive/Imágenes/Capturas de pantalla/Captura de pantalla 2024-01-25 102528.png"
+						},
+						{
+							"key": "name",
+							"value": "Jhon Segundo",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/updateName/6d32294c-44ac-49bd-98f5-2f7b1d900258",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"updateName",
+						"6d32294c-44ac-49bd-98f5-2f7b1d900258"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

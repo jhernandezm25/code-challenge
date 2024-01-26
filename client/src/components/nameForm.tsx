@@ -3,6 +3,8 @@
 import React, { useState } from 'react';
 import { addName } from '../services/services';
 import { getName } from '../services/services';
+import '../App.css';
+
 
 const NameForm: React.FC = () => {
   const [name, setName] = useState('');
@@ -32,18 +34,31 @@ const NameForm: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Name:
-        <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-      </label>
-      <br />
-      <label>
-        Avatar:
-        <input type="file" accept="image/*" onChange={(e) => setAvatar(e.target.files?.[0] || null)} />
-      </label>
-      <br />
-      <button type="submit">Submit</button>
+    <form className="margin_style" onSubmit={handleSubmit}>
+      <h2 className="title_style">Create form</h2>
+      <div className='container'>
+        <label className="label_style">
+          Name:
+          <input
+            className="input_style"
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </label>
+        <br />
+        <label className="label_style">
+          Avatar:
+          <input
+            className="input_style_button"
+            type="file"
+            accept="image/*"
+            onChange={(e) => setAvatar(e.target.files?.[0] || null)}
+          />
+        </label>
+        <br />
+        <button className='button_style' type="submit">Submit</button>
+      </div>
     </form>
   );
 };

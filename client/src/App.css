@@ -7,6 +7,52 @@
   pointer-events: none;
 }
 
+.title_style {
+  font-size: 1.5em;
+  text-align: center;
+  color: black;
+}
+
+.list_names {
+  font-size: 1.5em;
+  text-align: center;
+  color: black;
+  list-style: none;
+}
+.container {
+  text-align: center;
+}
+.margin_style {
+  margin: 10px 20px 10px 20px;
+  border: 2px black solid;
+}
+.label_style {
+  font-size: 16px;
+  text-align: center;
+  color: black;
+  margin-right: 20px;
+}
+.input_style {
+  text-align: center;
+  font-size: 16px;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+.input_style_button {
+  margin-left: 10px;
+  /* background-color: cornflowerblue; */
+}
+.button_style {
+  margin: 15px 10px;
+  background-color:rgb(108, 156, 36);
+  border-radius: 10px;
+  padding: 5px 30px;
+  border-color: transparent;
+}
+
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

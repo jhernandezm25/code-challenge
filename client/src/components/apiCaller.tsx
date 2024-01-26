@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { getName } from '../services/services';
+import '../App.css';
 
 const ApiCaller: React.FC = () => {
   const [names, setNames] = useState<string[]>([]);
@@ -23,9 +24,9 @@ const ApiCaller: React.FC = () => {
   }, [names]);
 
   return (
-    <div>
-      <h1>All Names:</h1>
-      <ul>
+    <div className='margin_style'>
+      <h1 className='title_style'>All Names:</h1>
+      <ul className='list_names'>
         {names.map((name, index) => (
           <li key={index}>{name}</li>
         ))}

@@ -21,35 +21,35 @@ const UpdateNameForm: React.FC  = () => {
   };
 
   return (
-    <div>
-      <h2>Update Name</h2>
-      <div>
-        <label htmlFor="updateId">ID:</label>
-        <input
+    <div className='margin_style container'>
+      <h2 className='title_style'>Update Name</h2>
+      <div className='container' >
+        <label className='label_style' htmlFor="updateId">ID:</label>
+        <input className='input_style'
           type="text"
           id="updateId"
           value={id}
           onChange={(e) => setId(e.target.value)}
         />
       </div>
-      <div>
-        <label htmlFor="updateName">Name:</label>
-        <input
+      <div className='container'>
+        <label className='label_style' htmlFor="updateName">Name:</label>
+        <input className='input_style'
           type="text"
           id="updateName"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
       </div>
-      <div>
-        <label htmlFor="updateAvatar">Avatar:</label>
-        <input
+      <div className='container'>
+        <label className='label_style' htmlFor="updateAvatar">Avatar:</label>
+        <input className='input_style_button'
           type="file"
           id="updateAvatar"
           onChange={(e) => setAvatar(e.target.files?.[0] || null)}
         />
       </div>
-      <button onClick={handleUpdateName}>Update Name</button>
+      <button className='button_style' onClick={handleUpdateName}>Update Name</button>
     </div>
   );
 };
