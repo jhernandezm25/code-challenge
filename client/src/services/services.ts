@@ -33,3 +33,21 @@ export const addName = async (formData: FormData) => {
     throw error;
   }
 };
+
+export const updateName = async (id: string, name?: string, avatar?: File): Promise<void> => {
+  try {
+    const formData = new FormData();
+    if (name !== undefined) {
+      formData.append('name', name);
+    }
+    if (avatar !== undefined) {
+      formData.append('avatar', avatar);
+    }
+
+    await axios.post(`${API_BASE_URL}/updateName/${id}`, formData);
+  } catch (error) {
+    console.error('Error updating name:', error);
+    throw new Error('Error updating name');
+  }
+};
+
