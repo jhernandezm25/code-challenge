@@ -15,4 +15,8 @@ export class NameRepository {
   addName(id: string, name: string, avatarData?: string): void {
     this.database.addName(id, name, avatarData);
   }
+
+  updateName(id: string, name?: string, avatarData?: string): any {
+    return this.database.updateName(id, name, avatarData);
+  }
 }

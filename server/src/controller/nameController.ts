@@ -20,4 +20,12 @@ export class NameController {
       return { code: 500, data: error.message };
     }
   }
+
+  public updateName(id: string, newName?: string, newAvatarData?: string) {
+    try {
+      return { code: 200, data: nameRepository.updateName(id, newName, newAvatarData) };
+    } catch (error: any) {
+      return { code: 500, data: error.message };
+    }
+  }
 }
