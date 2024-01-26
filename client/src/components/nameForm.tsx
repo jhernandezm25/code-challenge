@@ -20,13 +20,10 @@ const NameForm: React.FC = () => {
 
       await addName(formData);
 
-      // Luego de agregar un nombre, obtener la lista actualizada
       const updatedNames = await getName();
-      // Aquí puedes realizar acciones con la lista actualizada
 
       console.log('Updated names:', updatedNames);
 
-      // Puedes limpiar los campos del formulario o realizar otras acciones después de la operación
       setName('');
       setAvatar(null);
     } catch (error) {

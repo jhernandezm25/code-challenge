@@ -1,5 +1,3 @@
-// client/src/components/UpdateNameForm.tsx
-
 import React, { useState } from 'react';
 import { updateName } from '../services/services';
 import { getName } from '../services/services';
