@@ -2,9 +2,15 @@ import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 import apiRouter from './routes/routes';
+import multer from 'multer';
 
 const app = express();
 const port = 3000;
+
+const storage = multer.memoryStorage();
+const upload = multer({ storage: storage });
+
+
 
 app.use(cors());
 app.use(bodyParser.json());

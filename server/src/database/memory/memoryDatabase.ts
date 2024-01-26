@@ -11,7 +11,7 @@ export class InMemoryDatabase implements IName {
     return this.names;
   }
 
-  addName(name: string): void {
-    this.names.push({ name });
+  addName(name: string, avatarData?: string): void {
+    this.names.push({ name, avatarData });
   }
 }
