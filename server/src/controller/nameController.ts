@@ -8,7 +8,7 @@ export class NameController {
   public getNames() {
     try {
       return { code: 200, data: nameRepository.getNames() };
-    } catch (error) {
+    } catch (error: any) {
       return { code: 500, data: error.message };
     }
   }
@@ -16,7 +16,7 @@ export class NameController {
   public addName(name: string) {
     try {
       return { code: 200, data: nameRepository.addName(name) };
-    } catch (error) {
+    } catch (error: any) {
       return { code: 500, data: error.message };
     }
   }

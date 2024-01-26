@@ -1,13 +1,17 @@
-import { Name } from '../../models/name';
-import  { IName }  from '../interfaces/IName';
-export class InMemoryDatabase implements IName{
-    private names: Name[] = [];
+import { Name } from "../../models/name";
+import { IName } from "../interfaces/IName";
+export class InMemoryDatabase implements IName {
+  private names: Name[] = [];
 
-    getNames(): Name[] {
-        return this.names;
-    }
+  constructor() {
+    this.names.push({ name: "Jorge Hernandez" });
+  }
 
-    addName(name: string): void {
-        this.names.push({ name });
-    }
+  getNames(): Name[] {
+    return this.names;
+  }
+
+  addName(name: string): void {
+    this.names.push({ name });
+  }
 }

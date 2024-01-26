@@ -7,7 +7,7 @@ export const getAllNames = (req: Request, res: Response) => {
   try {
     const names = nameController.getNames();
     res.status(200).send(names);
-  } catch (error) {
+  } catch (error: any) {
     res.status(500).send(error.message);
   }
 };
@@ -17,7 +17,7 @@ export const addName = (req: Request, res: Response) => {
     const { name } = req.body;
     const success = nameController.addName(name);
     res.status(201).json({ message: "Name added successfully" });
-  } catch (error) {
+  } catch (error: any) {
     res.status(500).send(error.message);
   }
 };
