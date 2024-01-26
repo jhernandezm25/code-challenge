@@ -14,9 +14,7 @@ const UpdateNameForm: React.FC  = () => {
     try {
       await updateName(id, name, avatar || undefined);
 
-      // Luego de la actualización, ejecutamos la función proporcionada para refrescar la lista
       const updatedNames = await getName();
-      // Aquí puedes realizar acciones con la lista actualizada
 
       console.log('Updated names:', updatedNames);
     } catch (error) {
