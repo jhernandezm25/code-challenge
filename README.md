@@ -92,11 +92,46 @@ For the addName and updateName API endpoints, make sure to send the data in the 
 ### 2. 
 I added a postman collection in the folder postman_collection that are in the root
 
-### 3. Update a Name
+## Running the Project
 
+This project is organized into two main parts: the client and the server. To successfully run the application, follow these steps:
 
-    
+### Client
 
+1. Navigate to the `client` directory in your terminal:
+    ```bash
+    cd client
+    ```
 
+2. Install dependencies using npm:
+    ```bash
+    npm install
+    ```
 
+3. Start the client application:
+    ```bash
+    npm start
+    ```
 
+   This command initiates the development server for the React client, and your default web browser should open, displaying the client application.
+
+### Server
+
+1. Navigate to the `Server` directory in another terminal window or tab:
+    ```bash
+    cd Server
+    ```
+
+2. Install dependencies using npm:
+    ```bash
+    npm install
+    ```
+
+3. Start the server:
+    ```bash
+    npm run start
+    ```
+
+   This command starts the server, and you should see a message indicating that the server is running on a specific port.
+
+Now, with both the client and server running, you can interact with the full-stack application. The client and server are decoupled, allowing for independent development, testing, and scalability.
